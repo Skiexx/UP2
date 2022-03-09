@@ -63,3 +63,4 @@ C:\Users\gr602_banvl\RiderProjects\WpfApp1\WpfApp1\obj\Debug\net5.0-windows\App.
 C:\Users\gr602_banvl\RiderProjects\WpfApp1\WpfApp1\obj\Debug\net5.0-windows\MVVM\View\CookWindow.baml
 C:\Users\gr602_banvl\RiderProjects\WpfApp1\WpfApp1\obj\Debug\net5.0-windows\MVVM\View\LoginWindow.baml
 C:\Users\gr602_banvl\RiderProjects\WpfApp1\WpfApp1\obj\Debug\net5.0-windows\MVVM\View\WaiterWindow.baml
+C:\Users\gr602_banvl\RiderProjects\WpfApp1\WpfApp1\obj\Debug\net5.0-windows\Theme\TextBoxTheme.baml

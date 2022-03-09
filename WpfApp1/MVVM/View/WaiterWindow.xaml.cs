@@ -1,7 +1,7 @@
 using System.Windows;
-using WpfApp1.ViewModels;
+using WpfApp1.MVVM.ViewModel;
 
-namespace WpfApp1.Views
+namespace WpfApp1.MVVM.View
 {
     public partial class WaiterWindow : Window
     {

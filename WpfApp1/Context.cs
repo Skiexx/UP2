@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using WpfApp1.Models;
+using WpfApp1.MVVM.Model;
 
 namespace WpfApp1
 {
@@ -20,7 +20,8 @@ namespace WpfApp1
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Database=Cafe;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;" 
+                                        + "Database=Cafe;Trusted_Connection=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

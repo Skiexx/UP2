@@ -1,6 +1,8 @@
-namespace WpfApp1.ViewModels
+using WpfApp1.Core;
+
+namespace WpfApp1.MVVM.ViewModel
 {
-    public class WaiterWindowViewModel
+    public class WaiterWindowViewModel : ObservableObject
     {
         
     }

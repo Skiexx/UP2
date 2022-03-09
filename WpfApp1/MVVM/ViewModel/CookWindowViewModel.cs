@@ -1,4 +1,4 @@
-namespace WpfApp1.ViewModels
+namespace WpfApp1.MVVM.ViewModel
 {
     public class CookWindowViewModel
     {

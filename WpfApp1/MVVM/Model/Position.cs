@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WpfApp1.Models
+namespace WpfApp1.MVVM.Model
 {
     [Table("Positions")]
     public class Position

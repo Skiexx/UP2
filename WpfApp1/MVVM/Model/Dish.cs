@@ -1,10 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Runtime.InteropServices;
 
-namespace WpfApp1.Models
+namespace WpfApp1.MVVM.Model
 {
     [Table("Dishes")]
     public class Dish
