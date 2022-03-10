@@ -12,6 +12,6 @@ namespace Restaurant.MVVM.Model
         [ForeignKey(nameof(User))] public int UserId { get; set; }
         [Required] public DateTime ShiftDateTime { get; set; } 
         
-        [InverseProperty("Shifts")] public User User { get; set; }
+        [InverseProperty("Shifts")] public User? User { get; set; }
     }
 }

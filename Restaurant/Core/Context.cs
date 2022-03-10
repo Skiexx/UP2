@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Restaurant.MVVM.Model;
 
-namespace Restaurant
+namespace Restaurant.Core
 {
     public class Context : DbContext
     {

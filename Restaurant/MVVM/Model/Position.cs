@@ -10,7 +10,7 @@ namespace Restaurant.MVVM.Model
         public int DishId { get; set; }
         [Required] public int Count { get; set; }
         
-        [InverseProperty("Positions")] public Order Order { get; set; }
-        [InverseProperty("Positions")] public Dish Dish { get; set; }
+        [InverseProperty("Positions")] public Order? Order { get; set; }
+        [InverseProperty("Positions")] public Dish? Dish { get; set; }
     }
 }

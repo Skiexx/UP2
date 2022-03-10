@@ -14,10 +14,10 @@ namespace Restaurant.MVVM.Model
         [ForeignKey(nameof(User))] public int UserId { get; set; }
         [ForeignKey(nameof(Place))] public int PlaceId { get; set; }  
         
-        [InverseProperty("Orders")] public Place Place { get; set; }
-        [InverseProperty("Order")] public ICollection<Position> Positions { get; set; }
-        [InverseProperty("Orders")] public StatusOrder Status { get; set; }
-        [InverseProperty("Orders")] public User User { get; set; }
+        [InverseProperty("Orders")] public Place? Place { get; set; }
+        [InverseProperty("Order")] public ICollection<Position>? Positions { get; set; }
+        [InverseProperty("Orders")] public StatusOrder? Status { get; set; }
+        [InverseProperty("Orders")] public User? User { get; set; }
         
     }
 }

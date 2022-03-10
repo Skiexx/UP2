@@ -9,8 +9,8 @@ namespace Restaurant.MVVM.Model
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Required, MaxLength(255)] public string RoleName { get; set; }
+        [Required, MaxLength(255)] public string? RoleName { get; set; }
         
-        [InverseProperty("Role")] public ICollection<User> Users { get; set; }
+        [InverseProperty("Role")] public ICollection<User>? Users { get; set; }
     }
 }

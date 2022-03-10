@@ -9,10 +9,10 @@ namespace Restaurant.MVVM.Model
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Required, MaxLength(255)] public string Name { get; set; }
+        [Required, MaxLength(255)] public string? Name { get; set; }
         [Required, Column(TypeName = "decimal(10,2)")] public decimal Price { get; set; }
-        [Required] public string CookingTime { get; set; }
+        [Required] public string? CookingTime { get; set; }
         
-        [InverseProperty("Dish")] public ICollection<Position> Positions { get; set; }
+        [InverseProperty("Dish")] public ICollection<Position>? Positions { get; set; }
     }
 }

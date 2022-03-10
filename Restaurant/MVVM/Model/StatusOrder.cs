@@ -9,8 +9,8 @@ namespace Restaurant.MVVM.Model
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Required, MaxLength(255)] public string StatusName { get; set; }
+        [Required, MaxLength(255)] public string? StatusName { get; set; }
         
-        [InverseProperty("Status")] public ICollection<Order> Orders { get; set; }
+        [InverseProperty("Status")] public ICollection<Order>? Orders { get; set; }
     }
 }
