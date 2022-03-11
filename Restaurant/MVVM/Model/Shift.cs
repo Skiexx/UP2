@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Restaurant.MVVM.Model
+namespace WpfApp1.MVVM.Model
 {
     [Table("Shifts")]
     public class Shift

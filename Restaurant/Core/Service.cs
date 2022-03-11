@@ -1,5 +1,3 @@
-using Restaurant.Core;
-
 namespace WpfApp1.Core;
 
 public class Service

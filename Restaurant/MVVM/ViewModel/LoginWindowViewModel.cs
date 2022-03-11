@@ -1,11 +1,10 @@
-using Restaurant.Core;
+using WpfApp1.Core;
 
-namespace Restaurant.MVVM.ViewModel
+namespace WpfApp1.MVVM.ViewModel
 {
     public class LoginWindowViewModel
     {
-        Context context = new();
-        
-        
+        public RelayCommand BtnLogin { get; set; }
+        public string Login { get; set; }
     }
 }

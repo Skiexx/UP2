@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Input;
 
-namespace Restaurant.Core
+namespace WpfApp1.Core
 {
     public class RelayCommand : ICommand
     {

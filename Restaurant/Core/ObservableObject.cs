@@ -1,8 +1,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Restaurant.Core.AssemblyInfo;
 
-namespace Restaurant.Core
+namespace WpfApp1.Core
 {
     public class ObservableObject : INotifyPropertyChanged
     {

@@ -1,7 +1,8 @@
 ﻿using System.Windows;
-using Restaurant.MVVM.ViewModel;
+using System.Windows.Input;
+using WpfApp1.MVVM.ViewModel;
 
-namespace Restaurant.MVVM.View
+namespace WpfApp1.MVVM.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -11,7 +12,11 @@ namespace Restaurant.MVVM.View
         public LoginWindow()
         {
             InitializeComponent();
-            DataContext = new LoginWindowViewModel();
+        }
+
+        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

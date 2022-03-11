@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Restaurant.MVVM.Model;
+using WpfApp1.MVVM.Model;
 
-namespace Restaurant.Core
+namespace WpfApp1.Core
 {
     public class Context : DbContext
     {
