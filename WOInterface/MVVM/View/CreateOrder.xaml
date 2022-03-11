@@ -6,11 +6,54 @@
         xmlns:local="clr-namespace:WOInterface.MVVM.View"
         xmlns:viewModel="clr-namespace:WOInterface.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="CreateOrder" Height="450" Width="800">
+        Title="CreateOrder" Height="450" Width="800"
+        x:Name="Window"
+        WindowStyle="None" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Background="Transparent" AllowsTransparency="True">
     <Window.DataContext>
         <viewModel:CreateOrderWindowViewModel/>
     </Window.DataContext>
-    <Grid>
-        
-    </Grid>
+    <Border Background="White" CornerRadius="40">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0"
+                       Text="Создание Заказа"
+                       FontSize="36"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1"
+                        Margin="20,0" HorizontalAlignment="Right">
+                <Button Height="40" Width="150"
+                        Content="Сохранить" FontSize="18"
+                        Command="{Binding CreateOrderCommand}"
+                        CommandParameter="{Binding ElementName=Window}"
+                        Margin="0,0,10,0"/>
+                <Button Height="40" Width="150"
+                        Content="Отменить" FontSize="18"
+                        Command="{Binding CancelCommand}"
+                        CommandParameter="{Binding ElementName=Window}"/>
+            </StackPanel>
+            <DataGrid Grid.Row="1" Grid.Column="0"
+                      Margin="15,5,10,15"
+                      ItemsSource="{Binding Dishes}"
+                      CanUserAddRows="False"
+                      CanUserDeleteRows="False" AutoGenerateColumns="False" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Блюдо" Width="140" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="Цена" Width="110" Binding="{Binding Price}"/>
+                    <DataGridTextColumn Header="Время готовки" Width="120" Binding="{Binding CookingTime}"/>
+                </DataGrid.Columns>/>
+            </DataGrid>
+            <DataGrid Grid.Row="1" Grid.Column="1"
+                      Margin="10,5,15,15">
+            </DataGrid>
+        </Grid>
+    </Border>
 </Window>
