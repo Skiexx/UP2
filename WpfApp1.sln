@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant", "Restaurant\Restaurant.csproj", "{F96A33AC-402E-4893-B4FE-502DA5D3D82A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WOInterface", "WOInterface\WOInterface.csproj", "{1FB0D7FD-728E-4FCE-8012-72F1531576EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F96A33AC-402E-4893-B4FE-502DA5D3D82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F96A33AC-402E-4893-B4FE-502DA5D3D82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F96A33AC-402E-4893-B4FE-502DA5D3D82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F96A33AC-402E-4893-B4FE-502DA5D3D82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FB0D7FD-728E-4FCE-8012-72F1531576EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB0D7FD-728E-4FCE-8012-72F1531576EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB0D7FD-728E-4FCE-8012-72F1531576EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB0D7FD-728E-4FCE-8012-72F1531576EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
