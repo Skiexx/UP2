@@ -42,17 +42,35 @@
             </StackPanel>
             <DataGrid Grid.Row="1" Grid.Column="0"
                       Margin="15,5,10,15"
-                      ItemsSource="{Binding Dishes}"
-                      CanUserAddRows="False"
-                      CanUserDeleteRows="False" AutoGenerateColumns="False" >
+                      x:Name="Dishes"
+                      AutoGenerateColumns="False" CanUserAddRows="False"
+                      CanUserDeleteRows="False" IsReadOnly="True"
+                      CanUserReorderColumns="False"
+                      SelectedItem="{Binding AddDish}"
+                      ItemsSource="{Binding Dishes}">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Блюдо" Width="140" Binding="{Binding Name}"/>
-                    <DataGridTextColumn Header="Цена" Width="110" Binding="{Binding Price}"/>
-                    <DataGridTextColumn Header="Время готовки" Width="120" Binding="{Binding CookingTime}"/>
-                </DataGrid.Columns>/>
+                    <DataGridTextColumn Header="Блюдо" Width="*" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding Price}"/>
+                    <DataGridTextColumn Header="Время готовки" Width="*" Binding="{Binding CookingTime}"/>
+                </DataGrid.Columns>
             </DataGrid>
             <DataGrid Grid.Row="1" Grid.Column="1"
-                      Margin="10,5,15,15">
+                      Margin="10,5,15,15" 
+                      x:Name="OrderDishes"
+                      AutoGenerateColumns="False" CanUserAddRows="False"
+                      CanUserDeleteRows="False" CanUserReorderColumns="False"
+                      SelectedItem="{Binding RemoveDish}"
+                      ItemsSource="{Binding DishesInOrder}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Блюдо" Width="*" 
+                                        Binding="{Binding Name}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Цена" Width="*" 
+                                        Binding="{Binding Price}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Время готовки" Width="*" 
+                                        Binding="{Binding CookingTime}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Количество" Width="80"
+                                        Binding="{Binding Count}" IsReadOnly="False"/>
+                </DataGrid.Columns>
             </DataGrid>
         </Grid>
     </Border>

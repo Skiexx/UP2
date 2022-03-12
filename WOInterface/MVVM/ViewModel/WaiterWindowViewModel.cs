@@ -16,14 +16,14 @@ namespace WOInterface.MVVM.ViewModel
             {
                 return new RelayCommand<Window>(o =>
                 {
-                    o.Hide();
-                    CreateOrderWindow();
+                    CreateOrderWindow(o);
                 });
             }
         }
 
-        private void CreateOrderWindow()
+        private void CreateOrderWindow(Window window)
         {
+            window.Hide();
             CreateOrder createOrder = new();
             createOrder.Show();
         }
@@ -53,17 +53,36 @@ namespace WOInterface.MVVM.ViewModel
         #endregion
 
         #region [Exit]
-
-        public int ExitType { get; set; }
-        public RelayCommand SelectExit
+        
+        public RelayCommand<Window> SelectExit
         {
             get
             {
-                return new RelayCommand(() =>
+                return new RelayCommand<Window>(o =>
                 {
-                    
+                    MessageBoxResult result = CustomMessageBox.Show("Выход","Выберите способ выхода", MessageBoxButton.YesNoCancel);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        Exit();
+                    }
+                    else if (result == MessageBoxResult.No)
+                    {
+                        Exit(o);
+                    }
                 });
             }
+        }
+
+        private void Exit()
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Exit(Window window)
+        {
+            MainWindow mainWindow = new MainWindow();
+            window.Close();
+            mainWindow.Show();
         }
 
         #endregion

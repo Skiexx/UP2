@@ -32,6 +32,7 @@
                     FontSize="20"/>
             <Button Grid.Row="2"
                     Command="{Binding SelectExit}"
+                    CommandParameter="{Binding ElementName=Window}"
                     Width="200" Height="50" Content="Выйти"
                     FontSize="20"/>
         </Grid>
