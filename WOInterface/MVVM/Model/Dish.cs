@@ -14,5 +14,7 @@ namespace WOInterface.MVVM.Model
         [Required] public string? CookingTime { get; set; }
         
         [InverseProperty("Dish")] public ICollection<Position>? Positions { get; set; }
+        
+        [NotMapped] public int Count { get; set; }
     }
 }
