@@ -47,7 +47,6 @@ namespace WOInterface.MVVM.ViewModel
         {
             set
             {
-                value.Count = 2;
                 AddDishInOrder(value);
                 OnPropertyChanged();
             }

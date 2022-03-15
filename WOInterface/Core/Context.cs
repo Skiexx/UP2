@@ -21,7 +21,7 @@ namespace WOInterface.Core
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;" 
-                                        + "Database=Cafe;Trusted_Connection=True;");
+                                        + "Database=Cafe;Trusted_Connection=True;MultipleActiveResultSets=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
