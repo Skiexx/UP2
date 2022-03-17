@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WOInterface.Core;
 
 namespace WOInterface
 {
@@ -22,6 +23,7 @@ namespace WOInterface
     {
         public MainWindow()
         {
+            Context context = new Context();
             InitializeComponent();
         }
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)

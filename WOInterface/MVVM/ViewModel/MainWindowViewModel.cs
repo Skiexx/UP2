@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,7 +22,15 @@ namespace WOInterface.MVVM.ViewModel
                 return new RelayCommand<object>(execute: o => 
                     {
                         PasswordBox password = o as PasswordBox;
-                        var user = Service.Db.Users.FirstOrDefault(x => x.Login == Login && x.Password == password.Password);
+                        User user = null;
+                        try
+                        {
+                            user = Service.Db.Users.FirstOrDefault(x => x.Login == Login && x.Password == password.Password);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e);
+                        }
                         if (user != null)
                         {
                             SignIn(user);

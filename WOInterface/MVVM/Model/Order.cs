@@ -12,7 +12,8 @@ namespace WOInterface.MVVM.Model
         public int Id { get; set; }
         [Required] public DateTime CreationDateTime { get; set; }
         [ForeignKey(nameof(User))] public int UserId { get; set; }
-        [ForeignKey(nameof(Place))] public int PlaceId { get; set; }  
+        [ForeignKey(nameof(Place))] public int PlaceId { get; set; }
+        [ForeignKey(nameof(Status))] public int StatusId { get; set; }
         
         [InverseProperty("Orders")] public Place? Place { get; set; }
         [InverseProperty("Order")] public ICollection<Position>? Positions { get; set; }

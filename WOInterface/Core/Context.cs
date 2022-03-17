@@ -13,10 +13,11 @@ namespace WOInterface.Core
         public DbSet<StatusOrder> StatusOrders { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<StatusPosition> StatusPositions { get; set; }
 
         public Context()
         {
-            Database.EnsureCreatedAsync();
+            Database.EnsureCreated();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -26,7 +27,6 @@ namespace WOInterface.Core
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Position>().HasKey(x => new {x.DishId, x.OrderId});
         }
     }
 }
