@@ -5,9 +5,33 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:viewModel="clr-namespace:WOInterface.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="CookWindow" Height="450" Width="800">
+        Title="CookWindow" Height="450" Width="800"
+        x:Name="Window"
+        Background="Transparent" WindowStyle="None" WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True" ResizeMode="NoResize">
     <Window.DataContext>
-        <viewModel:CookWindowViewModel />
+        <viewModel:CookWindowViewModel/>
     </Window.DataContext>
-    <Grid />
+    <Border Background="White" CornerRadius="40"
+            BorderThickness="1" BorderBrush="Black">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0"
+                       Text="Незаконченные блюда"
+                       FontSize="30"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="30,0,0,0"/>
+            <StackPanel Grid.Row="0"
+                        Orientation="Horizontal"
+                        Margin="0,0,30,0"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right">
+                <Button/>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>

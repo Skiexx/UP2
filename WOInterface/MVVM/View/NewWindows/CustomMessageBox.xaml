@@ -7,29 +7,31 @@
         Title="CustomMessageBox" Height="100" Width="320"
         WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         Background="White" AllowsTransparency="True">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+    <Border BorderBrush="Black" BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
 
-        <TextBlock Name="MessageContainer" TextWrapping="WrapWithOverflow"
-                   FontSize="18" FontWeight="Medium" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBlock Name="MessageContainer" TextWrapping="WrapWithOverflow"
+                       FontSize="18" FontWeight="Medium" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
-        <StackPanel Name="ButtonContainer" Grid.Row="1" Orientation="Horizontal"
-                    HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <StackPanel Name="ButtonContainer" Grid.Row="1" Orientation="Horizontal"
+                        HorizontalAlignment="Center" VerticalAlignment="Bottom">
 
-            <StackPanel.Resources>
-                <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-                    <Setter Property="MinHeight" Value="30" />
-                    <Setter Property="MinWidth" Value="80" />
-                    <Setter Property="Margin" Value="8,0,8,5" />
-                    <Setter Property="FontWeight" Value="Medium" />
-                    <Setter Property="FontSize" Value="17" />
-                </Style>
+                <StackPanel.Resources>
+                    <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                        <Setter Property="MinHeight" Value="30" />
+                        <Setter Property="MinWidth" Value="80" />
+                        <Setter Property="Margin" Value="8,0,8,5" />
+                        <Setter Property="FontWeight" Value="Medium" />
+                        <Setter Property="FontSize" Value="17" />
+                    </Style>
 
-            </StackPanel.Resources>
+                </StackPanel.Resources>
 
-        </StackPanel>
-    </Grid>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>

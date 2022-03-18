@@ -12,7 +12,8 @@
     <Window.DataContext>
         <viewModel:MainWindowViewModel />
     </Window.DataContext>
-    <Border Background="White" CornerRadius="40">
+    <Border Background="White" CornerRadius="40"
+            BorderThickness="1" BorderBrush="Black">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="80" />
@@ -60,7 +61,6 @@
                         BorderThickness="0"
                         Margin="8" />
             </StackPanel>
-
         </Grid>
     </Border>
 </Window>

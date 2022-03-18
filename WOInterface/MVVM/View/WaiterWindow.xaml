@@ -12,7 +12,8 @@
     <Window.DataContext>
         <viewModel:WaiterWindowViewModel />
     </Window.DataContext>
-    <Border Background="White" CornerRadius="40">
+    <Border Background="White" CornerRadius="40"
+            BorderThickness="1" BorderBrush="Black">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition />

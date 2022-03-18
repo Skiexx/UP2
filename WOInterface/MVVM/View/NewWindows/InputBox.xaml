@@ -8,7 +8,8 @@
         WindowState="Normal" WindowStyle="None" AllowsTransparency="True"
         ResizeMode="NoResize" Background="Transparent"
         WindowStartupLocation="CenterScreen">
-    <Border CornerRadius="40" Background="White">
+    <Border CornerRadius="40" Background="White"
+            BorderThickness="1" BorderBrush="Black">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition />
