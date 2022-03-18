@@ -5,19 +5,64 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:viewModel="clr-namespace:WOInterface.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="Orders" Height="450" Width="800"
+        Title="Orders" Height="450" Width="600"
         x:Name="Window"
         WindowStyle="None" WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize" Background="Transparent" AllowsTransparency="True">
     <Window.DataContext>
-        <viewModel:OrdersWindowViewModel />
+        <viewModel:OrdersWindowViewModel/>
     </Window.DataContext>
     <Border Background="White" CornerRadius="40">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition />
+                <RowDefinition Height="60"/>
                 <RowDefinition />
             </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0"
+                       Text="Заказы"
+                       FontSize="36"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="70,0,0,0"/>
+            <StackPanel Grid.Row="0"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,30,0">
+                
+                <Button Height="40" Width="220"
+                        Margin="8"
+                        FontSize="18"
+                        Content="Изменить статус заказа"
+                        Command="{Binding ChangeStatusId}"/>
+                <Button Height="40" Width="100"
+                        Margin="8"
+                        Content="Закрыть"
+                        FontSize="18"
+                        Command="{Binding CloseWindow}"
+                        CommandParameter="{Binding ElementName=Window}"/>
+            </StackPanel>
+            <DataGrid Grid.Row="1"
+                      Margin="18,5,18,18"
+                      ItemsSource="{Binding OrdersGrid}"
+                      SelectedItem="{Binding CurrentOrder}"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      CanUserDeleteRows="False"
+                      IsReadOnly="True"
+                      CanUserReorderColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Номер заказа"
+                                        Binding="{Binding Id}"
+                                        Width="*"/>
+                    <DataGridTextColumn Header="Дата создания"
+                                        Binding="{Binding CreationDateTime}"
+                                        Width="*"/>
+                    <DataGridTextColumn Header="Статус заказа"
+                                        Binding="{Binding Status.StatusName}"
+                                        Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </Grid>
     </Border>
 </Window>

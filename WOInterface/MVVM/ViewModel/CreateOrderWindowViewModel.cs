@@ -2,6 +2,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
+using System.Windows.Data;
 using Microsoft.Toolkit.Mvvm.Input;
 using WOInterface.Core;
 using WOInterface.MVVM.Model;
@@ -128,7 +129,7 @@ public class CreateOrderWindowViewModel : BaseViewModel
             Service.Db.SaveChanges();
         }
 
-        CreateResult = CustomMessageBox.Show("Успешно", "Успешно сохранено", MessageBoxButton.OK);
+        CreateResult = CustomMessageBox.Show("Успешно", $"Успешно сохранено\nНомер заказ - {Order.Id}", MessageBoxButton.OK);
     }
 
     #endregion

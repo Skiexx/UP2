@@ -16,18 +16,17 @@ public class MainWindowViewModel
     public CookWindow CookWindow { get; set; }
     public WaiterWindow WaiterWindow { get; set; }
 
-    public RelayCommand<object> LoginCommand
+    public RelayCommand<PasswordBox> LoginCommand
     {
         get
         {
-            return new RelayCommand<object>(o =>
+            return new RelayCommand<PasswordBox>(o =>
                 {
-                    var password = o as PasswordBox;
                     User user = null;
                     try
                     {
                         user = Service.Db.Users.FirstOrDefault(x =>
-                            x.Login == Login && x.Password == password.Password);
+                            x.Login == Login && x.Password == o.Password);
                     }
                     catch (Exception e)
                     {
