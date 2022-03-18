@@ -1,7 +1,6 @@
-namespace WOInterface.Core
+namespace WOInterface.Core;
+
+public static class Service
 {
-    public static class Service
-    {
-        public static Context Db = new();
-    }
+    public static Context Db = new();
 }

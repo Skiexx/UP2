@@ -3,51 +3,64 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WOInterface"
         xmlns:viewModel="clr-namespace:WOInterface.MVVM.ViewModel"
         mc:Ignorable="d"
+        x:Name="Window"
         Title="MainWindow" Height="350" Width="300"
         WindowStyle="None" WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize" Background="Transparent" AllowsTransparency="True">
     <Window.DataContext>
-        <viewModel:MainWindowViewModel/>
+        <viewModel:MainWindowViewModel />
     </Window.DataContext>
     <Border Background="White" CornerRadius="40">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="80"/>
-                <RowDefinition Height="10"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="10"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="90"/>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Text="Авторизация"
                        FontSize="30" VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
+                       HorizontalAlignment="Center" />
             <TextBlock Grid.Row="1" FontSize="11"
                        Text="Логин" VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
+                       HorizontalAlignment="Center" />
             <TextBox Grid.Row="2" Text="{Binding Login}"
                      FontSize="11" Width="200" Height="40"
                      VerticalContentAlignment="Center"
-                     HorizontalContentAlignment="Center"/>
+                     HorizontalContentAlignment="Center" />
             <TextBlock Grid.Row="3" Text="Пароль"
                        FontSize="11" HorizontalAlignment="Center"
-                       VerticalAlignment="Center"/>
-            <PasswordBox Grid.Row="4" FontSize="11" 
+                       VerticalAlignment="Center" />
+            <PasswordBox Grid.Row="4" FontSize="11"
                          Name="Password"
                          Width="200" Height="40"
                          VerticalAlignment="Center"
                          HorizontalAlignment="Center"
                          VerticalContentAlignment="Center"
-                         HorizontalContentAlignment="Center"/>
-            <Button Grid.Row="5"
-                    Command="{Binding LoginCommand}"
-                    CommandParameter="{Binding ElementName=Password}"
-                    Width="150" Height="50"
-                    Content="Войти" FontSize="20"
-                    BorderThickness="0"/>
+                         HorizontalContentAlignment="Center" />
+            <StackPanel Grid.Row="5"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal"
+                        Margin="0,0,0,20">
+                <Button Command="{Binding LoginCommand}"
+                        CommandParameter="{Binding ElementName=Password}"
+                        Width="100" Height="50"
+                        Content="Войти" FontSize="20"
+                        BorderThickness="0"
+                        Margin="8" />
+                <Button Command="{Binding Exit}"
+                        CommandParameter="{Binding ElementName=Window}"
+                        Width="100" Height="50"
+                        Content="Выйти" FontSize="20"
+                        BorderThickness="0"
+                        Margin="8" />
+            </StackPanel>
+
         </Grid>
     </Border>
 </Window>

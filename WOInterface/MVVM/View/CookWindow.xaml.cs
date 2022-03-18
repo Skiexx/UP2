@@ -1,12 +1,11 @@
 using System.Windows;
 
-namespace WOInterface.MVVM.View
+namespace WOInterface.MVVM.View;
+
+public partial class CookWindow : Window
 {
-    public partial class CookWindow : Window
+    public CookWindow()
     {
-        public CookWindow()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

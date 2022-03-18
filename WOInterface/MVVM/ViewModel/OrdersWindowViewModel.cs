@@ -1,7 +1,5 @@
-namespace WOInterface.MVVM.ViewModel
+namespace WOInterface.MVVM.ViewModel;
+
+public class OrdersWindowViewModel
 {
-    public class OrdersWindowViewModel
-    {
-        
-    }
 }

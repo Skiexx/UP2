@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:WOInterface.MVVM.View"
         xmlns:viewModel="clr-namespace:WOInterface.MVVM.ViewModel"
         mc:Ignorable="d"
         x:Name="Window"
@@ -11,30 +10,30 @@
         WindowStyle="None" WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize" Background="Transparent" AllowsTransparency="True">
     <Window.DataContext>
-        <viewModel:WaiterWindowViewModel/>
+        <viewModel:WaiterWindowViewModel />
     </Window.DataContext>
     <Border Background="White" CornerRadius="40">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
             <Button Grid.Row="0"
                     Command="{Binding CreateOrderCommand}"
                     CommandParameter="{Binding ElementName=Window}"
                     Width="200" Height="50" Content="Создать заказ"
-                    FontSize="20"/>
+                    FontSize="20" />
             <Button Grid.Row="1"
                     Command="{Binding OrdersWindow}"
                     CommandParameter="{Binding ElementName=Window}"
                     Width="200" Height="50" Content="Заказы"
-                    FontSize="20"/>
+                    FontSize="20" />
             <Button Grid.Row="2"
                     Command="{Binding SelectExit}"
                     CommandParameter="{Binding ElementName=Window}"
                     Width="200" Height="50" Content="Выйти"
-                    FontSize="20"/>
+                    FontSize="20" />
         </Grid>
     </Border>
 </Window>

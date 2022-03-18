@@ -1,12 +1,11 @@
 using System.Windows;
 
-namespace WOInterface.MVVM.View
+namespace WOInterface.MVVM.View;
+
+public partial class Orders : Window
 {
-    public partial class Orders : Window
+    public Orders()
     {
-        public Orders()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

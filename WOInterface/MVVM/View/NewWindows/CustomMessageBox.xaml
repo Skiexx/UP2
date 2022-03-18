@@ -1,36 +1,35 @@
-<Window x:Class="WOInterface.MVVM.View.CustomMessageBox"
+<Window x:Class="WOInterface.MVVM.View.NewWindows.CustomMessageBox"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:WOInterface.MVVM.View"
         mc:Ignorable="d"
-        Title="CustomMessageBox" Height="80" Width="320"
+        Title="CustomMessageBox" Height="100" Width="320"
         WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         Background="White" AllowsTransparency="True">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-                    
+
         <TextBlock Name="MessageContainer" TextWrapping="WrapWithOverflow"
-                   FontSize="18" FontWeight="Medium" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        
+                   FontSize="18" FontWeight="Medium" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
         <StackPanel Name="ButtonContainer" Grid.Row="1" Orientation="Horizontal"
                     HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                
+
             <StackPanel.Resources>
                 <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-                    <Setter Property="MinHeight" Value="30"/>
-                    <Setter Property="MinWidth" Value="80"/>
-                    <Setter Property="Margin" Value="8,0,8,5"/>
+                    <Setter Property="MinHeight" Value="30" />
+                    <Setter Property="MinWidth" Value="80" />
+                    <Setter Property="Margin" Value="8,0,8,5" />
                     <Setter Property="FontWeight" Value="Medium" />
                     <Setter Property="FontSize" Value="17" />
                 </Style>
-                    
+
             </StackPanel.Resources>
-                
+
         </StackPanel>
     </Grid>
 </Window>

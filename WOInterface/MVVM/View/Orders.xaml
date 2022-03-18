@@ -3,14 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:WOInterface.MVVM.View"
         xmlns:viewModel="clr-namespace:WOInterface.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="Orders" Height="450" Width="800">
+        Title="Orders" Height="450" Width="800"
+        x:Name="Window"
+        WindowStyle="None" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Background="Transparent" AllowsTransparency="True">
     <Window.DataContext>
-        <viewModel:OrdersWindowViewModel/>
+        <viewModel:OrdersWindowViewModel />
     </Window.DataContext>
-    <Grid>
-        
-    </Grid>
+    <Border Background="White" CornerRadius="40">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+        </Grid>
+    </Border>
 </Window>

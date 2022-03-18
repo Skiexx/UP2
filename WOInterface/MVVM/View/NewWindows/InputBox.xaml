@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:WOInterface.MVVM.View.NewWindows"
         mc:Ignorable="d" x:Name="Window"
         Title="InputBox" Height="120" Width="300"
         WindowState="Normal" WindowStyle="None" AllowsTransparency="True"
@@ -12,26 +11,26 @@
     <Border CornerRadius="40" Background="White">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0"
                        Text="Введите кол-во:"
                        FontSize="24"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       Margin="0,0,50,0"/>
+                       Margin="0,0,50,0" />
             <TextBox Grid.Row="0" Height="30" Width="30" HorizontalAlignment="Center"
                      Margin="170,6,0,0"
                      x:Name="CountOf"
                      FontSize="18" Text="1"
-                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" 
+                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
                         Orientation="Horizontal" Grid.Row="1">
                 <Button Height="30" Width="80" Content="Сохранить" Margin="10"
-                        Click="BtnSave"/>
+                        Click="BtnSave" />
                 <Button Height="30" Width="80" Content="Отмена" Margin="10"
-                        Click="BtnCancel"/>
+                        Click="BtnCancel" />
             </StackPanel>
         </Grid>
     </Border>
