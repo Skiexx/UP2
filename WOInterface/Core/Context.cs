@@ -7,7 +7,7 @@ public class Context : DbContext
 {
     public Context()
     {
-        Database.EnsureCreated();
+        Database.EnsureCreatedAsync();
     }
 
     public DbSet<Dish> Dishes { get; set; }

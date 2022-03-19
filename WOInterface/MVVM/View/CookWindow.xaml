@@ -30,8 +30,38 @@
                         Margin="0,0,30,0"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Right">
-                <Button/>
+                <Button Height="40" Width="150"
+                        Content="Обновить" FontSize="18"
+                        Margin="8"
+                        Command="{Binding UpdateCommand}"/>
+                <Button Height="40" Width="150"
+                        Content="Выйти" FontSize="18"
+                        Margin="8"
+                        Command="{Binding ExitCommand}"
+                        CommandParameter="{Binding ElementName=Window}"/>
             </StackPanel>
+            <DataGrid Grid.Row="1"
+                      Margin="15,5,10,15"
+                      x:Name="Positions"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      CanUserDeleteRows="False"
+                      IsReadOnly="True"
+                      CanUserReorderColumns="False"
+                      SelectedItem="{Binding UpdatePosition}"
+                      ItemsSource="{Binding PositionsGrid}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Номер заказа"
+                                        Width="*"
+                                        Binding="{Binding OrderId}"/>
+                    <DataGridTextColumn Header="Название блюда"
+                                        Width="*"
+                                        Binding="{Binding Dish.Name}"/>
+                    <DataGridTextColumn Header="Количество"
+                                        Width="*"
+                                        Binding="{Binding Count}"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </Grid>
     </Border>
 </Window>

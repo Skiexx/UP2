@@ -10,8 +10,8 @@ public class Position
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
-    public int OrderId { get; set; }
-    public int DishId { get; set; }
+    [ForeignKey(nameof(Order))]public int OrderId { get; set; }
+    [ForeignKey(nameof(Dish))]public int DishId { get; set; }
     [Required] public int Count { get; set; }
     [ForeignKey(nameof(StatusPosition))] public int StatusId { get; set; }
 
